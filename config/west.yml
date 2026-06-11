@@ -2,6 +2,9 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    # 🔽 新しく「okunonishi」というリモート基地を独立して定義します（これが抜けていました）
+    - name: okunonishi
+      url-base: https://github.com/okunonishi
 
   projects:
     - name: zmk
@@ -9,7 +12,7 @@ manifest:
       revision: main
       import: app/west.yml
 
-    # 🔽 認証エラーを絶対に起こさないために、公開されている修正版URLをフルパスで直接指定します
+    # 🔽 remoteに上で定義した「okunonishi」を指定し、自動合成で正しいURLになるようにします
     - name: zmk-pmw3610-driver
-      url: https://github.com/okunonishi/zmk-pmw3610-driver
+      remote: okunonishi
       revision: main
