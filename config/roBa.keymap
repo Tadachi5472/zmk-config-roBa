@@ -15,7 +15,8 @@
                 &kp LCTRL &kp LEFT_WIN &kp LEFT_ALT &mo 6 &lt 2 SPACE &mo 3 &kp BACKSPACE &lt 1 ENTER &kp DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
+            /* マウスホイールスクロール */
+            sensor-bindings = <&inc_dec_msc 1 -1>;
         };
 
         FUNCTION {
@@ -44,7 +45,8 @@
                 &trans &trans &trans &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
+            /* ここもスクロール化 */
+            sensor-bindings = <&inc_dec_msc 1 -1>;
         };
     };
 };
