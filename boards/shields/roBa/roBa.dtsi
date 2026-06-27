@@ -104,13 +104,10 @@
         status = "disabled";
     };
 
-    sensors: sensors {
-        compatible = "zmk,keymap-sensors";
-        sensors = <&left_encoder &right_encoder>;
-
-        /* スクロールの細かさ */
-        triggers-per-rotation = <40>;
-    };
+   sensors: sensors {
+    compatible = "zmk,keymap-sensors";
+    sensors = <&left_encoder &right_encoder>;
+};
 
     trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
