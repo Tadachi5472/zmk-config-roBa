@@ -60,7 +60,6 @@
             <&key_physical_attrs 100 100  437  350 1000 437 350>,
             <&key_physical_attrs 100 100  550  387 2000 550 387>,
 
-            /* ここが重要：負数はそのまま書く（括弧禁止） */
             <&key_physical_attrs 100 100  650  387 -2000 650 387>,
             <&key_physical_attrs 100 100  763  350 -1000   0 350>,
 
@@ -104,10 +103,10 @@
         status = "disabled";
     };
 
-   sensors: sensors {
-    compatible = "zmk,keymap-sensors";
-    sensors = <&left_encoder &&right_encoder>;
-};
+    sensors: sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&left_encoder &right_encoder>;
+    };
 
     trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
